@@ -1,0 +1,45 @@
+{
+  "name": "next-client",
+  "version": "1.0.0",
+  "description": "A NodeJS boilerplate for Next JS and Apollo Client",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run dev",
+    "build:tailwind": "tailwind build src/styles/index.css -o src/styles/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/ZaHuPro/next-client.git"
+  },
+  "keywords": [
+    "next",
+    "boilerplate",
+    "apollo",
+    "gql"
+  ],
+  "author": "ZaHu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ZaHuPro/next-client/-/issues"
+  },
+  "homepage": "https://gitlab.com/ZaHuPro/next-client/-/blob/master/README.md",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "next": "12.2.0",
+    "next-cookies": "^2.0.3",
+    "next-fonts": "^1.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.0.5",
+    "tailwindcss": "^3.1.4"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0"
+  }
+}
