@@ -10,7 +10,7 @@ module.exports = withFonts({
   // },
   env: {
     GQL_BASE_URL: process.env.GQL_BASE_URL || 'http://localhost:5050/graphql',
-    GQL_WS_URL: process.env.GQL_BASE_URL || 'ws://localhost:5050/graphql',
+    GQL_WS_URL: process.env.GQL_BASE_URL || 'ws://localhost:4000/graphql',
     APP_URL: process.env.APP_URL || 'https://www.website.com',
     APP_NAME: process.env.APP_NAME || 'Website',
   },

@@ -29,11 +29,20 @@ const splitLink = split(
     );
   },
   wssLink,
-  httpLink,
+  httpLink
 );
 
-export const client = new ApolloClient({
-  link: splitLink,
-  cache,
-  credentials: "include",
-});
+export const client = () => {
+  const ssrMode = typeof window === "undefined";
+  if (ssrMode) {
+    return new ApolloClient({
+      link: httpLink,
+      cache,
+    });
+  }
+  return new ApolloClient({
+    link: splitLink,
+    cache,
+    credentials: "include",
+  });
+};

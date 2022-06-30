@@ -12,11 +12,9 @@ const UserAdded = () => {
   return (
     <div className="w-full flex justify-center items-center">
       <div>
-        {data.users.map((e) => (
-          <span className="m-4 font-mono uppercase" key={e.id}>
-            {e.username}
+          <span className="m-4 font-mono uppercase">
+          {data.userAdded.id}/{data.userAdded.username}
           </span>
-        ))}
       </div>
     </div>
   );
