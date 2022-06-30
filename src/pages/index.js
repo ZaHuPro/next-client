@@ -1,39 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { gql } from "@apollo/client";
-import client from "../apollo-client";
+import { useQuery } from "@apollo/client";
 
 import BasicLayout from "../components/Layouts/Basic";
+import { GET_USERS } from "../gql/user";
+import Users from "../components/Molecule/Users";
+import UserAdded from "../components/Molecule/UserAdded";
 
 const Home = () => {
-  const [users, setUsers] = useState([]);
+  const { loading, error, data } = useQuery(GET_USERS);
 
-  const fetchData = async () => {
-    const { data, loading } = await client.query({
-      query: gql`
-        query Users {
-          users {
-            id
-            username
-          }
-        }
-      `,
-    });
-    console.log({ data, loading })
-    if(data.users && data.users.length > 0) {
-      setUsers(data.users);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
   return (
     <div>
+      <div className="w-full text-center m-8">
       <h1>Home</h1>
-      <div>
-        {users.map((e) => <span className="m-4 font-mono uppercase" key={e.id}>{e.username}</span>)}
       </div>
+      <Users />
+      <UserAdded />
     </div>
   );
 };
