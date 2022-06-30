@@ -9,7 +9,7 @@ module.exports = withFonts({
   //   path: 'https://www.website.com/images',
   // },
   env: {
-    API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:4040/api',
+    GQL_BASE_URL: process.env.GQL_BASE_URL || 'http://localhost:5050/graphql',
     APP_URL: process.env.APP_URL || 'https://www.website.com',
     APP_NAME: process.env.APP_NAME || 'Website',
   },
