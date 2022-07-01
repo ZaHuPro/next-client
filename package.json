@@ -7,9 +7,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run dev",
-    "build:tailwind": "tailwind build src/styles/index.css -o src/styles/tailwind.css"
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -39,12 +37,13 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-toastify": "^9.0.5",
-    "tailwindcss": "^3.1.4",
     "websocket": "^1.0.34",
     "ws": "^8.8.0"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.18.0",
-    "eslint-config-next": "12.2.0"
+    "eslint-config-next": "12.2.0",
+    "styled-components": "^5.3.5"
   }
 }

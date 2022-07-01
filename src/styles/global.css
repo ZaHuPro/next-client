@@ -1,9 +1,0 @@
-#__react-alert__ div div div span{
-    font-size: 14px;
-}
-
-@media (max-width: 767px) {
-    #__react-alert__ div {
-        align-items: center !important;
-    }
-}
