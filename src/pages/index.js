@@ -1,9 +1,9 @@
 import React from "react";
 
-import BasicLayout from "../components/Layouts/Basic";
-import Users from "../components/Molecule/Users";
-import UserAdded from "../components/Molecule/UserAdded";
-import { Container } from "../components/Elements/container";
+import BasicLayout from "../components/templates/basic";
+import Users from "../components/molecules/users";
+import UserAdded from "../components/molecules/user-added";
+import { Container } from "../components/atoms/container";
 
 const Home = () => {
   return (
